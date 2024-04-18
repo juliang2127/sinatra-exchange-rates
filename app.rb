@@ -17,7 +17,7 @@ get("/") do
   # convert the string to JSON
   @parsed_data = JSON.parse(raw_data_string)
 
-  @currency_parsed = @parsed_data.fetch("currencies",{})
+  @currency_parsed = @parsed_data.fetch("currencies")
 
   @currency_parsed_keys = @currency_parsed.keys
 
@@ -43,7 +43,7 @@ get("/:from_currency") do
   # convert the string to JSON
   @parsed_data = JSON.parse(raw_data_string)
 
-  @currency_parsed = @parsed_data.fetch("currencies",{})
+  @currency_parsed = @parsed_data.fetch("currencies")
 
   @currency_parsed_keys = @currency_parsed.keys
   
